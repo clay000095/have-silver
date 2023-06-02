@@ -126,7 +126,7 @@ defineProps({
   <footer class="footer pt-5 mt-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 mb-4 ms-auto">
+        <!-- <div class="col-md-3 mb-4 ms-auto">
           <div>
             <a :href="brand.route">
               <img :src="brand.logo" class="mb-3 footer-logo" alt="main_logo" />
@@ -150,7 +150,7 @@ defineProps({
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <div
           class="col-md-2 col-sm-6 col-6 mb-4"
           v-for="{ name, items } of menus"

@@ -14,14 +14,13 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               image="https://images.unsplash.com/photo-1527525591638-6fa607ae2f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80"
               icon="touch_app"
               title="主要功能"
-              description="可以讓大家按興趣加入各種社團，多種不同東西等著各位"
+              description="旁邊是我們的主要功能們，可以看看有什麼喜歡的"
             />
 
             <RotatingCardBack
               image="https://images.unsplash.com/photo-1569181665281-bc67a5e74dc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-              title="Discover More"
-              description="You will save a lot of time going from prototyping to full-functional
-                code because all elements are implemented."
+              title="要什麼有什麼"
+              description="多種願望一次滿足"
               :action="[
                 {
                   route: './/sections/page-sections/hero-sections.html',
@@ -35,31 +34,27 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
           <div class="row justify-content-start">
             <DefaultInfoCard
               icon="content_copy"
-              title="Full Documentation"
-              description="Built by developers for developers. Check the foundation and
-                  you will find everything inside our documentation."
+              title="安全狀態鈕一鍵發送"
+              description="透過【有銀某】平台提供的安全狀態鈕，可讓使用者迅速發送安全訊息"
             />
             <DefaultInfoCard
               icon="flip_to_front"
-              title="Bootstrap 5 Ready"
-              description="The world’s most popular front-end open source toolkit,
-                  featuring Sass variables and mixins."
+              title="年長者交友社群建置"
+              description="根據年長者的興趣和喜好提供不同社團，以促進他們之間的交流和社交活動。"
             />
           </div>
           <div class="row justify-content-start mt-5">
             <DefaultInfoCard
               class="mt-3"
               icon="price_change"
-              title="Save Time & Money"
-              description="Creating your design from scratch with dedicated designers can
-                be very expensive. Start with our Design System."
+              title="AI自動推播交友"
+              description="透過這項功能，我們能根據使用者註冊時填寫的區域資訊，以及他們所在地區的年長者們"
             />
             <DefaultInfoCard
               class="mt-3"
               icon="devices"
-              title="Fully Responsive"
-              description="Regardless of the screen size, the website content will
-                  naturally fit the given resolution."
+              title="各社區群組 - 厝邊消息不漏接"
+              description="此功能會在用戶註冊時一併加入，旨在促進使用者參與社區活動，和增進社區互動的功能。"
             />
           </div>
         </div>

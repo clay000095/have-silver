@@ -5,7 +5,7 @@ import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
 
 // images
 import ArrDark from "@/assets/img/down-arrow-dark.svg";
-import downArrow from "@/assets/img/down-arrow.svg";
+// import downArrow from "@/assets/img/down-arrow.svg";
 import DownArrWhite from "@/assets/img/down-arrow-white.svg";
 
 const props = defineProps({
@@ -15,9 +15,9 @@ const props = defineProps({
     color: String,
     label: String,
     default: () => ({
-      route: "https://www.creative-tim.com/product/vue-material-kit",
+      route: "https://www.edh.tw/",
       color: "bg-gradient-success",
-      label: "好康",
+      label: "健康一把罩",
     }),
   },
   transparent: {
@@ -89,6 +89,7 @@ watch(
   }
 );
 </script>
+
 <template>
   <nav
     class="navbar navbar-expand-lg top-0"
@@ -120,7 +121,7 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        首 頁
+        首頁
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -134,12 +135,12 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        Material Design
+        首頁
       </RouterLink>
       <a
-        href="https://www.creative-tim.com/product/vue-material-kit-pro"
+        href="https://www.edh.tw/"
         class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
-        >Buy Now</a
+        >健康一把罩</a
       >
       <button
         class="navbar-toggler shadow-none ms-2"
@@ -206,18 +207,18 @@ watch(
                       >
                         <span>關於我們</span>
                       </RouterLink>
-                      <RouterLink
+                      <!-- <RouterLink
                         :to="{ name: 'contactus' }"
                         class="dropdown-item border-radius-md"
                       >
                         <span>聯絡我們</span>
-                      </RouterLink>
-                      <RouterLink
+                      </RouterLink> -->
+                      <!-- <RouterLink
                         :to="{ name: 'author' }"
                         class="dropdown-item border-radius-md"
                       >
                         <span>Author</span>
-                      </RouterLink>
+                      </RouterLink> -->
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                       >
@@ -271,7 +272,7 @@ watch(
               </div>
             </div>
           </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
+          <!-- <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
@@ -907,7 +908,7 @@ watch(
                 </div>
               </div>
             </div>
-          </li>
+          </li> -->
           <!-- 放github logo -->
           <!-- <li class="nav-item dropdown dropdown-hover mx-2"> 
             <a
@@ -933,12 +934,19 @@ watch(
         </ul>
         <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item">
-            <a
+            <!-- <a  原本寫的，改了action.lable也還是顯示BUY NOW
               :href="action.route"
               class="btn btn-sm mb-0"
               :class="action.color"
               onclick="smoothToPricing('pricing-soft-ui')"
               >{{ action.label }}</a
+            > -->
+            <a
+              :href="action.route"
+              class="btn btn-sm mb-0"
+              :class="action.color"
+              onclick="smoothToPricing('pricing-soft-ui')"
+              >健康一把罩</a
             >
           </li>
         </ul>

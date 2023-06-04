@@ -23,8 +23,8 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
               description="多種願望一次滿足"
               :action="[
                 {
-                  route: './/sections/page-sections/hero-sections.html',
-                  label: 'Start with Headers',
+                  route: 'https://www.cwb.gov.tw/V8/C/W/County/index.html',
+                  label: '會不會下雨啊今天',
                 },
               ]"
             />

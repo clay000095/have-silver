@@ -199,7 +199,7 @@ watch(
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1"
                       >
-                        介紹
+                        項目
                       </div>
                       <RouterLink
                         :to="{ name: 'about' }"
@@ -211,7 +211,7 @@ watch(
                         :to="{ name: 'contactus' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>聯絡我們</span>
+                        <span>AI 專屬助理</span>
                       </RouterLink>
                       <!-- <RouterLink
                         :to="{ name: 'author' }"
@@ -238,36 +238,36 @@ watch(
                 <div
                   class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0"
                 >
-                  Landing Pages
+                  項目
                 </div>
                 <RouterLink
                   :to="{ name: 'about' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>About Us</span>
+                  <span>關於我們</span>
                 </RouterLink>
                 <RouterLink
                   :to="{ name: 'contactus' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>Contact Us</span>
+                  <span>AI 專屬助理</span>
                 </RouterLink>
-                <RouterLink
+                <!-- <RouterLink
                   :to="{ name: 'author' }"
                   class="dropdown-item border-radius-md"
                 >
                   <span>Author</span>
-                </RouterLink>
+                </RouterLink> -->
                 <div
                   class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                 >
-                  Account
+                  帳戶
                 </div>
                 <RouterLink
                   :to="{ name: 'signin-basic' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>Sign In</span>
+                  <span>登入</span>
                 </RouterLink>
               </div>
             </div>

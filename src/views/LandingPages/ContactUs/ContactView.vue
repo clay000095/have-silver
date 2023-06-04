@@ -45,19 +45,19 @@ export default {
 <template>
   <DefaultNavbar transparent />
   <Header>
+    <video
+      autoplay
+      loop
+      muted
+      class="video-bg"
+      style="position: absolute; width: 100%; height: 100%"
+    >
+      <source src="../../../assets/video/virtualbg2.mp4" type="video/mp4" />
+    </video>
     <div
       class="page-header align-items-start min-vh-100"
       style="position: relative; display: flex; justify-content: center"
     >
-      <video
-        autoplay
-        loop
-        muted
-        class="video-bg"
-        style="position: absolute; top: 0; left: 0; width: 200%; height: 200%"
-      >
-        <source src="../../../assets/video/virtualbg2.mp4" type="video/mp4" />
-      </video>
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-4 col-md-8 col-12 mx-auto">

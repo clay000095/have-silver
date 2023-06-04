@@ -31,7 +31,7 @@ export default {
         headers: {
           accept: "application/json",
           authorization:
-            "Basic YmFybmVzMTg2MTM1QGdtYWlsLmNvbQ:xtLew1BjFCLOg5hVO6khd",
+            "Basic d3VoOTk2NTQzQGdtYWlsLmNvbQ:LganxEl6MPIMJfBuEt85E",
         },
       };
 
@@ -67,7 +67,12 @@ export default {
 
 <style>
 .video-wrapper {
-  position: relative;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 9999;
 }
 </style>

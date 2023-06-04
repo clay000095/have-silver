@@ -38,7 +38,7 @@ export default {
           accept: "application/json",
           "content-type": "application/json",
           authorization:
-            "Basic YmFybmVzMTg2MTM1QGdtYWlsLmNvbQ:xtLew1BjFCLOg5hVO6khd",
+            "Basic d3VoOTk2NTQzQGdtYWlsLmNvbQ:LganxEl6MPIMJfBuEt85E",
         },
         data: {
           script: {
@@ -76,6 +76,9 @@ export default {
 
 <style>
 .custom-input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
   border: 2px solid #ccc;
   border-radius: 5px;
   padding: 10px;

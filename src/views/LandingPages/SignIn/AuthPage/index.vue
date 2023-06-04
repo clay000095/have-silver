@@ -19,15 +19,17 @@ onMounted(() => {
 
 <template>
   <DefaultNavbar transparent />
+  <video
+    autoplay
+    loop
+    muted
+    class="video-bg"
+    style="position: absolute; width: 100%; height: 100%"
+  >
+    <source src="../../../../assets/video/groupbg1.mp4" type="video/mp4" />
+  </video>
   <Header>
-    <div
-      class="page-header align-items-start min-vh-100"
-      :style="{
-        backgroundImage:
-          'url(https://images.unsplash.com/photo-1536408157291-aef6d736e2cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1268&q=80)',
-      }"
-      loading="lazy"
-    >
+    <div class="page-header align-items-start min-vh-100">
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container my-auto">
         <div class="row">
@@ -140,3 +142,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.video-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+</style>

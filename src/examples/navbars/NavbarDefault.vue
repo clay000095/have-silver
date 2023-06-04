@@ -176,7 +176,7 @@ watch(
                 :class="getTextColor()"
                 >dashboard</i
               >
-              主要介紹
+              服務
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -207,12 +207,12 @@ watch(
                       >
                         <span>關於我們</span>
                       </RouterLink>
-                      <!-- <RouterLink
+                      <RouterLink
                         :to="{ name: 'contactus' }"
                         class="dropdown-item border-radius-md"
                       >
                         <span>聯絡我們</span>
-                      </RouterLink> -->
+                      </RouterLink>
                       <!-- <RouterLink
                         :to="{ name: 'author' }"
                         class="dropdown-item border-radius-md"

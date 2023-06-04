@@ -9,16 +9,41 @@ import DefaultFooter from "@/examples/footers/FooterDefault.vue";
 import image from "@/assets/img/illustrations/illustration-signin.jpg";
 
 //material components
-import MaterialInput from "@/components/MaterialInput.vue";
-import MaterialTextArea from "@/components/MaterialTextArea.vue";
-import MaterialButton from "@/components/MaterialButton.vue";
+// import MaterialInput from "@/components/MaterialInput.vue";
+// import MaterialTextArea from "@/components/MaterialTextArea.vue";
+// import MaterialButton from "@/components/MaterialButton.vue";
 
 // material-input
 import setMaterialInput from "@/assets/js/material-input";
+
+// Invoke the setMaterialInput function on mounted
 onMounted(() => {
   setMaterialInput();
 });
 </script>
+
+<script>
+import PostTalk from "./PostTalk.vue";
+import GetTalk from "./GetTalk.vue";
+
+export default {
+  components: {
+    PostTalk,
+    GetTalk,
+  },
+  data() {
+    return {
+      talkId: "",
+    };
+  },
+  methods: {
+    setTalkId(id) {
+      this.talkId = id;
+    },
+  },
+};
+</script>
+
 <template>
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
@@ -26,9 +51,9 @@ onMounted(() => {
         <DefaultNavbar
           :sticky="true"
           :action="{
-            route: 'https://www.creative-tim.com/product/vue-material-kit-pro',
+            route: 'https://www.edh.tw/',
             color: 'bg-gradient-success',
-            label: 'Buy Now',
+            label: '健康一把罩',
           }"
         />
       </div>
@@ -62,56 +87,15 @@ onMounted(() => {
                 <div
                   class="bg-gradient-success shadow-success border-radius-lg p-3"
                 >
-                  <h3 class="text-white text-success mb-0">Contact us</h3>
+                  <h3 class="text-white text-success mb-0">你的AI助理</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p class="pb-3">
-                  For further questions, including partnership opportunities,
-                  please email hello@creative-tim.com or contact using our
-                  contact form.
-                </p>
-                <form id="contact-form" method="post" autocomplete="off">
-                  <div class="card-body p-0 my-3">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <MaterialInput
-                          class="input-group-static mb-4"
-                          type="text"
-                          label="Full Name"
-                          placeholder="Full Name"
-                        />
-                      </div>
-                      <div class="col-md-6 ps-md-2">
-                        <MaterialInput
-                          class="input-group-static mb-4"
-                          type="email"
-                          label="Email"
-                          placeholder="hello@creative-tim.com"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-group mb-0 mt-md-0 mt-4">
-                      <MaterialTextArea
-                        id="message"
-                        class="input-group-static mb-4"
-                        :rows="6"
-                        placeholder="Describe your problem in at least 250 characters"
-                        >How can we help you?</MaterialTextArea
-                      >
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 text-center">
-                        <MaterialButton
-                          variant="gradient"
-                          color="success"
-                          class="mt-3 mb-0"
-                          >Send Message</MaterialButton
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                <!-- Import and use the PostTalk component -->
+                <PostTalk @talkCreated="setTalkId" />
+
+                <!-- Import and use the GetTalk component -->
+                <GetTalk v-if="talkId" :talkId="talkId" />
               </div>
             </div>
           </div>

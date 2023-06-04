@@ -81,30 +81,6 @@ onMounted(() => {
                     >
                   </p>
                 </form>
-                <!-- <form @submit.prevent="login" role="form" class="text-start">
-                  <div class="title"></div>
-                  <input
-                    placeholder="Username"
-                    type="text"
-                    v-model="username"
-                  />
-                  <br />
-                  <input
-                    placeholder="Password"
-                    type="password"
-                    v-model="password"
-                  />
-                  <br />
-                  <button class="btn btn-success" type="submit">Login</button>
-                  <p class="mt-4 text-sm text-center">
-                    還沒有帳號嗎？
-                    <a
-                      href="#"
-                      class="text-success text-gradient font-weight-bold"
-                      >註冊</a
-                    >
-                  </p>
-                </form> -->
               </div>
             </div>
           </div>

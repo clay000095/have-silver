@@ -1,7 +1,11 @@
 <template>
   <div>
-    <!-- Display the result video -->
-    <video :src="resultUrl" controls></video>
+    <div class="video-wrapper">
+      <!-- Display the result video -->
+      <video :src="resultUrl" controls></video>
+    </div>
+    <!-- Download button for the video -->
+    <button @click="downloadVideo">Download Video</button>
   </div>
 </template>
 
@@ -27,7 +31,7 @@ export default {
         headers: {
           accept: "application/json",
           authorization:
-            "Basic Y2xpY2sxNzY0ODNAZ21haWwuY29t:j2UZILw9dfIuFz3IAE5rk",
+            "Basic YmFybmVzMTg2MTM1QGdtYWlsLmNvbQ:xtLew1BjFCLOg5hVO6khd",
         },
       };
 
@@ -41,11 +45,29 @@ export default {
         });
     };
 
+    const downloadVideo = () => {
+      // Create a link element
+      const link = document.createElement("a");
+      link.href = resultUrl.value;
+      link.download = "video.mp4";
+
+      // Simulate click event to trigger the download
+      link.click();
+    };
+
     onMounted(fetchTalk);
 
     return {
       resultUrl,
+      downloadVideo,
     };
   },
 };
 </script>
+
+<style>
+.video-wrapper {
+  position: relative;
+  z-index: 9999;
+}
+</style>

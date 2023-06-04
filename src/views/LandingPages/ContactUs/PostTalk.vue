@@ -2,9 +2,11 @@
   <div>
     <!-- Input field for the user message -->
     <div class="mb-3">
-      <label for="userMessage" class="form-label">User Message</label>
+      <label for="userMessage" class="form-label d-flex justify-content-center"
+        >想說的話</label
+      >
       <input
-        class="form-control"
+        class="form-group d-flex justify-content-center custom-input"
         type="text"
         id="userMessage"
         v-model="userMessage"
@@ -12,7 +14,11 @@
     </div>
 
     <!-- Button to trigger video rendering -->
-    <button class="btn btn-primary" @click="createTalk">Render Video</button>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary custom-button" @click="createTalk">
+        想好來按我吧
+      </button>
+    </div>
   </div>
 </template>
 
@@ -32,7 +38,7 @@ export default {
           accept: "application/json",
           "content-type": "application/json",
           authorization:
-            "Basic Y2xpY2sxNzY0ODNAZ21haWwuY29t:j2UZILw9dfIuFz3IAE5rk",
+            "Basic YmFybmVzMTg2MTM1QGdtYWlsLmNvbQ:xtLew1BjFCLOg5hVO6khd",
         },
         data: {
           script: {
@@ -67,3 +73,24 @@ export default {
   },
 };
 </script>
+
+<style>
+.custom-input {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.custom-button {
+  background-color: #a20c23;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+</style>

@@ -3,10 +3,8 @@ import { onMounted } from "vue";
 
 //example components
 import DefaultNavbar from "@/examples/navbars/NavbarDefault.vue";
-import DefaultFooter from "@/examples/footers/FooterDefault.vue";
-
-//image
-import image from "@/assets/img/illustrations/illustration-signin.jpg";
+// import DefaultFooter from "@/examples/footers/FooterDefault.vue";
+import Header from "@/examples/Header.vue";
 
 //material components
 // import MaterialInput from "@/components/MaterialInput.vue";
@@ -45,49 +43,36 @@ export default {
 </script>
 
 <template>
-  <div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-      <div class="col-12">
-        <DefaultNavbar
-          :sticky="true"
-          :action="{
-            route: 'https://www.edh.tw/',
-            color: 'bg-gradient-success',
-            label: '健康一把罩',
-          }"
-        />
-      </div>
-    </div>
-  </div>
-  <section>
-    <div class="page-header min-vh-100">
-      <div class="container">
+  <DefaultNavbar transparent />
+  <Header>
+    <div
+      class="page-header align-items-start min-vh-100"
+      style="position: relative; display: flex; justify-content: center"
+    >
+      <video
+        autoplay
+        loop
+        muted
+        class="video-bg"
+        style="position: absolute; top: 0; left: 0; width: 200%; height: 200%"
+      >
+        <source src="../../../assets/video/virtualbg2.mp4" type="video/mp4" />
+      </video>
+      <div class="container my-auto">
         <div class="row">
-          <div
-            class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column"
-          >
-            <div
-              class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
-              :style="{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-              }"
-              loading="lazy"
-            ></div>
-          </div>
-          <div
-            class="mt-8 col-xl-5 col-lg-6 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5"
-          >
-            <div
-              class="card d-flex blur justify-content-center shadow-lg my-sm-0 my-sm-6 mt-8 mb-5"
-            >
+          <div class="col-lg-4 col-md-8 col-12 mx-auto">
+            <div class="card z-index-0 fadeIn3 fadeInBottom">
               <div
-                class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
+                class="card-header p-0 position-relative mt-n4 mx-3 z-index-2"
               >
                 <div
-                  class="bg-gradient-success shadow-success border-radius-lg p-3"
+                  class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1"
                 >
-                  <h3 class="text-white text-success mb-0">你的AI助理</h3>
+                  <h4
+                    class="text-white font-weight-bolder text-center mt-2 mb-0"
+                  >
+                    AI 專屬助理
+                  </h4>
                 </div>
               </div>
               <div class="card-body">
@@ -102,6 +87,27 @@ export default {
         </div>
       </div>
     </div>
-  </section>
-  <DefaultFooter />
+    <footer class="footer position-absolute bottom-2 py-2 w-100">
+      <div class="container">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-12 col-md-6 my-auto">
+            <div class="text-center text-sm text-white text-lg-start">
+              © {{ new Date().getFullYear() }}, made by Havesliver
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </Header>
 </template>
+
+<style scoped>
+.video-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+</style>

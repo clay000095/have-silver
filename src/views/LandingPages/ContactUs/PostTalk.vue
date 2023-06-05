@@ -15,7 +15,7 @@
 
     <!-- Button to trigger video rendering -->
     <div class="d-flex justify-content-center">
-      <button class="btn btn-primary custom-button" @click="createTalk">
+      <button class="btn btn-danger custom-button" @click="createTalk">
         想好來按我吧
       </button>
     </div>
@@ -38,7 +38,7 @@ export default {
           accept: "application/json",
           "content-type": "application/json",
           authorization:
-            "Basic d3VoOTk2NTQzQGdtYWlsLmNvbQ:LganxEl6MPIMJfBuEt85E",
+            "Basic Y2xheTAwMDA5NUBnbWFpbC5jb20:4yWtUQuGpXwh1MF5cGF2z",
         },
         data: {
           script: {
@@ -88,7 +88,7 @@ export default {
 }
 
 .custom-button {
-  background-color: #a20c23;
+  background-color: #c9290d;
   color: white;
   padding: 10px 20px;
   border: none;

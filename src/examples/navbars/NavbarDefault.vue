@@ -15,9 +15,9 @@ const props = defineProps({
     color: String,
     label: String,
     default: () => ({
-      route: "https://www.edh.tw/",
-      color: "bg-gradient-success",
-      label: "健康一把罩",
+      route: "https://dosw.gov.taipei/Default.aspx",
+      color: "bg-gradient-warning",
+      label: "安全狀態",
     }),
   },
   transparent: {
@@ -121,7 +121,11 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        首頁
+        <img
+          src="@/assets/img/logo-have-white.png"
+          alt="Logo"
+          style="width: 35px; height: auto"
+        />
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -138,9 +142,9 @@ watch(
         首頁
       </RouterLink>
       <a
-        href="https://www.edh.tw/"
-        class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
-        >健康一把罩</a
+        href="https://dosw.gov.taipei/Default.aspx"
+        class="btn btn-sm bg-gradient-warning mb-0 ms-auto d-lg-none d-block"
+        >安全狀態</a
       >
       <button
         class="navbar-toggler shadow-none ms-2"
@@ -213,12 +217,12 @@ watch(
                       >
                         <span>AI 專屬助理</span>
                       </RouterLink>
-                      <!-- <RouterLink
+                      <RouterLink
                         :to="{ name: 'author' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Author</span>
-                      </RouterLink> -->
+                        <span>股市探探</span>
+                      </RouterLink>
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                       >
@@ -252,12 +256,12 @@ watch(
                 >
                   <span>AI 專屬助理</span>
                 </RouterLink>
-                <!-- <RouterLink
+                <RouterLink
                   :to="{ name: 'author' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>Author</span>
-                </RouterLink> -->
+                  <span>股市探探</span>
+                </RouterLink>
                 <div
                   class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                 >
@@ -946,7 +950,7 @@ watch(
               class="btn btn-sm mb-0"
               :class="action.color"
               onclick="smoothToPricing('pricing-soft-ui')"
-              >健康一把罩</a
+              >安全狀態</a
             >
           </li>
         </ul>

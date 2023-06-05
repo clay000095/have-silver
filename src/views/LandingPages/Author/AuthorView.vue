@@ -2,15 +2,17 @@
 // example components
 import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
 import Header from "../../../examples/Header.vue";
+import USDailyStock from "./Sections/USDailyStock.vue";
+import TWDailyStock from "./Sections/TWDailyStock.vue";
 
 // sections
-import Footer from "./Sections/AuthorFooter.vue";
-import Profile from "./Sections/AuthorProfile.vue";
-import Posts from "./Sections/AuthorPosts.vue";
-import Contact from "./Sections/AuthorContact.vue";
+// import Footer from "./Sections/AuthorFooter.vue";
+// import Profile from "./Sections/AuthorProfile.vue";
+// import Posts from "./Sections/AuthorPosts.vue";
+// import Contact from "./Sections/AuthorContact.vue";
 
 // image
-import image from "@/assets/img/city-profile.jpg";
+import image from "@/assets/img/stock.jpg";
 </script>
 <template>
   <DefaultNavbar transparent />
@@ -24,6 +26,8 @@ import image from "@/assets/img/city-profile.jpg";
     </div>
   </Header>
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
+    <TWDailyStock />
+    <USDailyStock />
     <Profile />
     <Posts />
   </div>

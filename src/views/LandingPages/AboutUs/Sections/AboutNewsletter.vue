@@ -15,26 +15,23 @@ onMounted(() => {
     <div class="container">
       <div class="row">
         <div class="col-md-6 m-auto">
-          <h4>Be the first to see the news</h4>
-          <p class="mb-4">
-            Your company may not be in the software business, but eventually, a
-            software company will be in your business.
-          </p>
+          <h4>想收到我們的最新消息嗎</h4>
+          <p class="mb-4">有關於我們的新版本推出和新體驗都會馬上跟你們說喔</p>
           <div class="row">
             <div class="col-8">
               <MaterialInput
                 class="input-group-outline"
                 id="email"
-                :label="{ text: 'Email Here...', class: 'form-label' }"
+                :label="{ text: '輸入Email...', class: 'form-label' }"
                 type="email"
               />
             </div>
             <div class="col-4 ps-0">
               <MaterialButton
                 variant="gradient"
-                color="success"
+                color="warning"
                 class="mb-0 h-100 position-relative z-index-2"
-                >Subscribe</MaterialButton
+                >訂閱我們</MaterialButton
               >
             </div>
           </div>
@@ -43,7 +40,7 @@ onMounted(() => {
           <div class="position-relative">
             <img
               class="max-width-50 w-100 position-relative z-index-2"
-              src="@/assets/img/macbook.png"
+              src="@/assets/img/have-silver-macbook.png"
               alt="image"
             />
           </div>

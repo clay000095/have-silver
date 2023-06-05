@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 4189,
-    //開給別人連
+    //公開IP
     // host: "0.0.0.0",
   },
   resolve: {

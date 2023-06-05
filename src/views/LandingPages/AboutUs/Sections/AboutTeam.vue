@@ -4,9 +4,7 @@ import HorizontalTeamCard from "@/examples/cards/teamCards/HorizontalTeamCard.vu
 
 // images
 import kevin from "@/assets/img/kevin.jpg";
-// import william from "@/assets/img/bruce-mars.jpg";
-// import ivana from "@/assets/img/ivana-squares.jpg";
-// import marquez from "@/assets/img/ivana-square.jpg";
+import yolanda from "@/assets/img/yolanda1.jpg";
 </script>
 
 <template>
@@ -18,29 +16,27 @@ import kevin from "@/assets/img/kevin.jpg";
           <p class="text-white opacity-8 mb-0">共同打造有銀某平台</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col-lg-6 col-12">
           <HorizontalTeamCard
             class="mt-4"
             :image="kevin"
-            :profile="{ name: 'Emma Roberts', link: 'javascript:;' }"
-            :position="{ label: 'UI Designer', color: 'success' }"
-            description="Artist is a term applied to a person who engages in an
-                    activity deemed to be an art."
+            :profile="{ name: '趙威凱', link: 'javascript:;' }"
+            :position="{ label: '小弟', color: 'warning' }"
+            description="創造有銀某有你有我"
           />
         </div>
         <div class="col-lg-6 col-12">
           <HorizontalTeamCard
-            class="mt-lg-4 mt-5"
-            :image="kevin"
-            :profile="{ name: 'William Pearce', link: 'javascript:;' }"
-            :position="{ label: 'Boss', color: 'success' }"
-            description="Artist is a term applied to a person who engages in an
-                    activity deemed to be an art."
+            class="mt-4"
+            :image="yolanda"
+            :profile="{ name: '蔡苡彤', link: 'javascript:;' }"
+            :position="{ label: '老大', color: 'warning' }"
+            description="終於把有銀某搞出來了"
           />
         </div>
       </div>
-      <div class="row mt-4">
+      <!-- <div class="row mt-4">
         <div class="col-lg-6 col-12">
           <HorizontalTeamCard
             class="mt-4 z-index-2"
@@ -61,7 +57,7 @@ import kevin from "@/assets/img/kevin.jpg";
                     activity deemed to be an art."
           />
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

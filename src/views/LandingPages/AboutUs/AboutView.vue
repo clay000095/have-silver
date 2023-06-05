@@ -6,7 +6,7 @@ import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 
 //image
-import bg0 from "@/assets/img/bg9.jpg";
+import imagebg from "@/assets/img/elder3.jpg";
 
 //dep
 import Typed from "typed.js";
@@ -14,8 +14,8 @@ import Typed from "typed.js";
 //sections
 // import Information from "./Sections/AboutInformation.vue"
 import AboutTeam from "./Sections/AboutTeam.vue";
-// import Featuring from "./Sections/AboutFeaturing.vue";
-// import Newsletter from "./Sections/AboutNewsletter.vue";
+import Featuring from "./Sections/AboutFeaturing.vue";
+import Newsletter from "./Sections/AboutNewsletter.vue";
 
 const body = document.getElementsByTagName("body")[0];
 //hooks
@@ -53,7 +53,7 @@ onUnmounted(() => {
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-75"
-      :style="{ backgroundImage: `url(${bg0})` }"
+      :style="{ backgroundImage: `url(${imagebg})` }"
     >
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
@@ -63,9 +63,9 @@ onUnmounted(() => {
               年長者作伙 <span class="text-white" id="typed"></span>
             </h1>
             <div id="typed-strings">
-              <h1>下棋</h1>
+              <h1>下象棋</h1>
               <h1>登山</h1>
-              <h1>打球囉</h1>
+              <h1>來去泡茶</h1>
             </div>
             <p class="lead mb-4 text-white opacity-8">
               我們團隊致力於打造銀髮生態圈

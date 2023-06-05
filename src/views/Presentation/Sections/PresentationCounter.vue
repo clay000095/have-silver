@@ -11,32 +11,34 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
             <div class="col-md-4 position-relative">
               <DefaultCounterCard
                 color="warning"
-                title="銀髮族 / 里"
-                description="有多少年長者在一個里裡面"
+                title="年長者"
+                description="有多少年長者住在一個里裡呢"
                 :count="1500"
                 suffix="+"
-                :duration="3000"
+                :duration="2500"
                 divider="vertical"
               />
             </div>
             <div class="col-md-4 position-relative">
               <DefaultCounterCard
                 color="warning"
-                title="肉桂捲"
-                description="好吃欸 有嚼勁卡好吃"
-                :count="3000"
+                title="全台年長者"
+                description="50歲以上好多人喔"
+                :count="9141897"
                 suffix="+"
-                :duration="3000"
+                :duration="2500"
                 divider="vertical"
               />
             </div>
             <div class="col-md-4">
               <DefaultCounterCard
                 color="warning"
-                title="先放啦"
-                description="不知道寫啥"
-                :count="16980"
-                :duration="3000"
+                title="年長科技仔"
+                description="有行動裝置的科技銀髮族們"
+                :count="8410545"
+                suffix="+"
+                :duration="2500"
+                divider="vertical"
               />
             </div>
           </div>

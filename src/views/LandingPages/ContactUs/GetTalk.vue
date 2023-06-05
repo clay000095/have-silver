@@ -4,8 +4,8 @@
       <!-- Display the result video -->
       <video :src="resultUrl" controls></video>
     </div>
-    <!-- Download button for the video -->
-    <button @click="downloadVideo">Download Video</button>
+    <!-- Download button for the video
+    <button @click="downloadVideo">Download Video</button> -->
   </div>
 </template>
 
@@ -25,41 +25,51 @@ export default {
 
     // Fetch the talk data and retrieve the result URL
     const fetchTalk = () => {
-      const options = {
-        method: "GET",
-        url: `https://api.d-id.com/talks/${props.talkId}`,
-        headers: {
-          accept: "application/json",
-          authorization:
-            "Basic d3VoOTk2NTQzQGdtYWlsLmNvbQ:LganxEl6MPIMJfBuEt85E",
-        },
-      };
+      const pause = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 3500);
+      });
 
-      axios
-        .request(options)
-        .then((response) => {
-          resultUrl.value = response.data.result_url;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+      pause.then(() => {
+        const options = {
+          method: "GET",
+          url: `https://api.d-id.com/talks/${props.talkId}`,
+          headers: {
+            accept: "application/json",
+            authorization:
+              "Basic Y2xheTAwMDA5NUBnbWFpbC5jb20:4yWtUQuGpXwh1MF5cGF2z",
+          },
+        };
+
+        axios
+          .request(options)
+          .then((response) => {
+            console.log(response.data);
+            resultUrl.value = response.data.result_url;
+            console.log(resultUrl.value);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      });
     };
 
-    const downloadVideo = () => {
-      // Create a link element
-      const link = document.createElement("a");
-      link.href = resultUrl.value;
-      link.download = "video.mp4";
+    // const downloadVideo = () => {
+    //   // Create a link element
+    //   const link = document.createElement("a");
+    //   link.href = resultUrl.value;
+    //   link.download = "video.mp4";
 
-      // Simulate click event to trigger the download
-      link.click();
-    };
+    //   // Simulate click event to trigger the download
+    //   link.click();
+    // };
 
     onMounted(fetchTalk);
 
     return {
       resultUrl,
-      downloadVideo,
+      // downloadVideo,
     };
   },
 };

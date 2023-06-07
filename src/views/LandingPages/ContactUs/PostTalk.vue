@@ -43,12 +43,19 @@ export default {
         data: {
           script: {
             type: "text",
-            provider: { type: "microsoft", voice_id: "zh-TW-YunJheNeural" },
+            // 男聲
+            // provider: { type: "microsoft", voice_id: "zh-TW-YunJheNeural" },
+            // 女聲
+            provider: { type: "microsoft", voice_id: "zh-TW-HsiaoChenNeural" },
             ssml: false,
             input: userMessage.value,
           },
+          // Kevin
+          // source_url:
+          //   "https://create-images-results.d-id.com/google-oauth2%7C117380509640710001512/upl_e7dA7E5I4A6lMtZ_Lg8ip/image.jpeg",
+          // Yolanda
           source_url:
-            "https://create-images-results.d-id.com/google-oauth2%7C117380509640710001512/upl_e7dA7E5I4A6lMtZ_Lg8ip/image.jpeg",
+            "https://create-images-results.d-id.com/google-oauth2%7C112492416696038752447/upl_q2mbs38Q7zQ3asWZhPeSi/image.jpeg",
           driver_url: "bank://lively",
           webhook: "https://host.domain.tld/to/webhook",
         },

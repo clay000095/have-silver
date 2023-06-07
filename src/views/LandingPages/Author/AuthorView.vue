@@ -6,7 +6,7 @@ import USDailyStock from "./Sections/USDailyStock.vue";
 import TWDailyStock from "./Sections/TWDailyStock.vue";
 
 // sections
-// import Footer from "./Sections/AuthorFooter.vue";
+import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 // import Profile from "./Sections/AuthorProfile.vue";
 // import Posts from "./Sections/AuthorPosts.vue";
 // import Contact from "./Sections/AuthorContact.vue";
@@ -32,5 +32,5 @@ import image from "@/assets/img/stock.jpg";
     <Posts />
   </div>
   <Contact />
-  <Footer />
+  <DefaultFooter />
 </template>

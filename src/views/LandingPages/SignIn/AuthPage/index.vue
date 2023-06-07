@@ -154,6 +154,16 @@ onMounted(() => {
                         />
                       </div>
                       <div class="mb-3">
+                        <label for="lastName" class="form-label">電話</label>
+                        <input
+                          id="lastName"
+                          class="form-control"
+                          type="text"
+                          v-model="last_name"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
                         <label for="interests" class="form-label">興趣</label>
                         <input
                           id="interests"

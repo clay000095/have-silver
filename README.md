@@ -8,6 +8,11 @@
 
 # todo-app
 
+## Clone the app
+```
+git clone https://github.com/clay000095/have-silver/tree/apiTemp.git
+```
+
 ## Project setup
 ```
 npm install
